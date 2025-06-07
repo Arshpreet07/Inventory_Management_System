@@ -1,0 +1,6 @@
+1,Laptop,1000.0,2,Electronics,12
+2,T-Shirt,20.0,4,Clothing,Cotton,M
+3,RedShoe,1200.0,9,Shoes,-,30
+4,Phone,600.0,3,Electronics,12
+5,Jacket,150.0,2,Clothing,Wool,XL
+6,Boot,800.0,5,Shoes,-,40

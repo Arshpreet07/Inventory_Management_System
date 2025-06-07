@@ -1,0 +1,7 @@
+Item ID: 1, Quantity: 1, Price: 1000, Type: restock, Timestamp: Mon Jan 27 16:17:33 2025
+Item ID: 1, Quantity: 2, Price: 1000, Type: sale, Timestamp: Mon Feb  3 17:33:29 2025
+Item ID: 1, Quantity: 1, Price: 1000, Type: restock, Timestamp: Mon Feb  3 17:33:29 2025
+Item ID: 1, Quantity: 2, Price: 1000, Type: sale, Timestamp: Mon Feb  3 17:35:22 2025
+Item ID: 1, Quantity: 1, Price: 1000, Type: restock, Timestamp: Mon Feb  3 17:35:22 2025
+Item ID: 1, Quantity: 2, Price: 1000, Type: sale, Timestamp: Sat May 10 16:50:16 2025
+Item ID: 1, Quantity: 1, Price: 1000, Type: restock, Timestamp: Sat May 10 16:50:16 2025

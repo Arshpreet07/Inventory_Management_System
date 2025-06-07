@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build with MySQL Client (ARM64)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-o", "invSys",
+                "main.cpp",
+                "Clothing.cpp",
+                "Electronics.cpp",
+                "InventoryItem.cpp",
+                "InventoryManager.cpp",
+                "UserManager.cpp",
+                "User.cpp",
+                "TransactionManager.cpp",
+                "Shoes.cpp",
+                "DatabaseConnection.cpp",
+                "-I/usr/local/mysql-connector-c++-9.2.0/include/",
+                "-L/usr/local/mysql-connector-c++-9.2.0/lib64",
+                "-lmysqlcppconn",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build task using MySQL client for ARM64"
+        }
+    ]
+}

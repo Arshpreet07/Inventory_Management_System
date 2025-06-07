@@ -1,0 +1,5 @@
+[2025-01-27 16:17:33] Sale processed for ID: 1, Quantity: 2
+[2025-01-27 16:17:42] User admin logged in.
+[2025-02-03 17:33:29] Sale processed for ID: 1, Quantity: 2
+[2025-02-03 17:35:22] Sale processed for ID: 1, Quantity: 2
+[2025-05-10 16:50:16] Sale processed for ID: 1, Quantity: 2
