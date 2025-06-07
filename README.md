@@ -68,6 +68,7 @@ ________________________________________________________________________________
   
 ## Sample Menu Options
 
+<img width="1097" alt="Screenshot 2025-06-07 at 12 47 30 PM" src="https://github.com/user-attachments/assets/77aba819-ffe1-4ce7-837a-807df320bc95" />
 
 
 ## Database Schema (SQL Setup)
