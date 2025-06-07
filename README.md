@@ -80,41 +80,57 @@ Before running the project, set up the required MySQL tables using the following
 
 ```sql
 CREATE TABLE Users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
     role VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Inventory (
-    id INT PRIMARY KEY,
-    name VARCHAR(255),
-    price DOUBLE,
-    stock INT,
-    minStock INT,
-    discountType VARCHAR(50),
-    discountValue DOUBLE,
-    category VARCHAR(50)
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    stock_quantity INT NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    restock_threshold INT DEFAULT 5,
+    restock_amount INT DEFAULT 10,
+    discount_type varchar(20) DEFAULT 'None',
+    discount_value DECIMAL(10,2) DEFAULT 0.0
 );
 
 CREATE TABLE Clothing (
-    itemId INT PRIMARY KEY,
-    fabricType VARCHAR(100),
+    item_id INT PRIMARY KEY,
+    fabric_type VARCHAR(50),
     size VARCHAR(10),
-    FOREIGN KEY (itemId) REFERENCES Inventory(id) ON DELETE CASCADE
+    FOREIGN KEY (item_id) REFERENCES Inventory(item_id) ON DELETE CASCADE
 );
 
-CREATE TABLE Electronics (
-    itemId INT PRIMARY KEY,
-    warrantyPeriod INT,
-    FOREIGN KEY (itemId) REFERENCES Inventory(id) ON DELETE CASCADE
+create table Electronics(
+    electronics_id INT PRIMARY KEY,
+    warranty_period INT NOT NULL,
+    FOREIGN KEY (electronics_id) REFERENCES Inventory(item_id) ON DELETE CASCADE
 );
 
-CREATE TABLE Shoes (
-    itemId INT PRIMARY KEY,
-    shoeType VARCHAR(100),
-    size VARCHAR(10),
-    FOREIGN KEY (itemId) REFERENCES Inventory(id) ON DELETE CASCADE
+create table Shoes(
+    shoes_id INT PRIMARY KEY,
+    brand VARCHAR(100) NOT NULL,
+    size VARCHAR(20) NOT NULL,
+    FOREIGN KEY (shoes_id) REFERENCES Inventory(item_id) ON DELETE CASCADE
+);
+
+CREATE TABLE AuditLogs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    event TEXT NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Transactions (
+     transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+     item_id INT NOT NULL,
+     quantity INT NOT NULL,
+     price DECIMAL(10,2) NOT NULL,
+     type VARCHAR(10) NOT NULL,
+     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 ```
 </details>
